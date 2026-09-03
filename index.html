@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StyleStudio | Outfit Customizer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <span class="logo-symbol">✦</span>
+        StyleStudio
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#studio">Studio</a>
+        <a href="#favorites">Favorites</a>
+    </nav>
+
+    <button class="nav-btn" id="navCustomize">
+        Customize
+        <span>↗</span>
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            PERSONAL STYLE, REIMAGINED
+        </div>
+
+        <h1>
+            Create a look<br>
+            that's <i>uniquely</i> you.
+        </h1>
+
+        <p>
+            Mix, match and customize your perfect outfit
+            with our interactive fashion studio.
+        </p>
+
+        <button class="hero-btn" id="heroStart">
+            Start Creating
+            <span>→</span>
+        </button>
+
+    </div>
+
+    <div class="hero-fashion">
+
+        <div class="hero-circle"></div>
+
+        <div class="hero-card card-one">
+            <span>✦</span>
+            Your Style
+        </div>
+
+        <div class="hero-card card-two">
+            <span>♡</span>
+            Your Choice
+        </div>
+
+        <div class="fashion-figure">
+
+            <div class="hero-head"></div>
+            <div class="hero-hair"></div>
+
+            <div class="hero-body">
+                <div class="hero-arm left"></div>
+                <div class="hero-arm right"></div>
+            </div>
+
+            <div class="hero-skirt"></div>
+
+            <div class="hero-leg leg-one"></div>
+            <div class="hero-leg leg-two"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STUDIO ================= -->
+
+<section class="studio" id="studio">
+
+    <div class="section-heading">
+
+        <div>
+            <div class="eyebrow">
+                THE FASHION STUDIO
+            </div>
+
+            <h2>
+                Build your <i>look.</i>
+            </h2>
+        </div>
+
+        <p>
+            Choose your favorite pieces, experiment with
+            colors and create a look that feels completely yours.
+        </p>
+
+    </div>
+
+
+    <div class="studio-layout">
+
+
+        <!-- ================= WARDROBE ================= -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-top">
+
+                <div>
+                    <span class="sidebar-label">WARDROBE</span>
+                    <h3>Categories</h3>
+                </div>
+
+                <span class="item-count">18</span>
+
+            </div>
+
+
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search pieces..."
+                >
+
+            </div>
+
+
+            <div class="categories">
+
+                <button class="category active" data-category="all">
+                    <span>✦</span>
+                    All Pieces
+                    <b>18</b>
+                </button>
+
+                <button class="category" data-category="tops">
+                    <span>♧</span>
+                    Tops
+                    <b>4</b>
+                </button>
+
+                <button class="category" data-category="bottoms">
+                    <span>◇</span>
+                    Bottoms
+                    <b>4</b>
+                </button>
+
+                <button class="category" data-category="shoes">
+                    <span>⌁</span>
+                    Shoes
+                    <b>4</b>
+                </button>
+
+                <button class="category" data-category="accessories">
+                    <span>✧</span>
+                    Accessories
+                    <b>6</b>
+                </button>
+
+            </div>
+
+
+            <div class="sidebar-note">
+
+                <span>✦</span>
+
+                <p>
+                    Don't know where to start?
+                    Try creating a random look.
+                </p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= CLOTHING ================= -->
+
+        <main class="clothing-area">
+
+            <div class="area-header">
+
+                <div>
+                    <span class="eyebrow">CURATED PIECES</span>
+                    <h3>Choose your pieces</h3>
+                </div>
+
+                <button class="random-btn" id="randomLook">
+                    ✦ Random Look
+                </button>
+
+            </div>
+
+
+            <div class="clothing-grid">
+
+
+                <!-- TOP 1 -->
+
+                <div class="clothing-card"
+                     data-category="tops"
+                     data-name="Rose Knit Top"
+                     data-color="#b96c83">
+
+                    <div class="product-visual rose-bg">
+                        <div class="mini-top rose-top"></div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Tops</span>
+                        <h4>Rose Knit Top</h4>
+                        <p>Soft knit · Blush</p>
+                    </div>
+
+                </div>
+
+
+                <!-- TOP 2 -->
+
+                <div class="clothing-card"
+                     data-category="tops"
+                     data-name="Classic White Shirt"
+                     data-color="#eeeeea">
+
+                    <div class="product-visual white-bg">
+                        <div class="mini-top white-top"></div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Tops</span>
+                        <h4>Classic White Shirt</h4>
+                        <p>Cotton · Ivory</p>
+                    </div>
+
+                </div>
+
+
+                <!-- TOP 3 -->
+
+                <div class="clothing-card"
+                     data-category="tops"
+                     data-name="Midnight Blouse"
+                     data-color="#28262b">
+
+                    <div class="product-visual black-bg">
+                        <div class="mini-top black-top"></div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Tops</span>
+                        <h4>Midnight Blouse</h4>
+                        <p>Satin · Black</p>
+                    </div>
+
+                </div>
+
+
+                <!-- TOP 4 -->
+
+                <div class="clothing-card"
+                     data-category="tops"
+                     data-name="Sage Crop Top"
+                     data-color="#667b68">
+
+                    <div class="product-visual sage-bg">
+                        <div class="mini-top sage-top"></div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Tops</span>
+                        <h4>Sage Crop Top</h4>
+                        <p>Ribbed · Sage</p>
+                    </div>
+
+                </div>
+
+
+                <!-- BOTTOM 1 -->
+
+                <div class="clothing-card"
+                     data-category="bottoms"
+                     data-name="Blue Jeans"
+                     data-color="#3f5776">
+
+                    <div class="product-visual denim-bg">
+                        <div class="mini-bottom blue-bottom"></div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Bottoms</span>
+                        <h4>Blue Jeans</h4>
+                        <p>Straight fit · Denim</p>
+                    </div>
+
+                </div>
+
+
+                <!-- BOTTOM 2 -->
+
+                <div class="clothing-card"
+                     data-category="bottoms"
+                     data-name="Black Trousers"
+                     data-color="#222126">
+
+                    <div class="product-visual black-bg">
+                        <div class="mini-bottom black-bottom"></div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Bottoms</span>
+                        <h4>Black Trousers</h4>
+                        <p>Wide leg · Black</p>
+                    </div>
+
+                </div>
+
+
+                <!-- BOTTOM 3 -->
+
+                <div class="clothing-card"
+                     data-category="bottoms"
+                     data-name="Cream Pants"
+                     data-color="#b7a996">
+
+                    <div class="product-visual beige-bg">
+                        <div class="mini-bottom cream-bottom"></div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Bottoms</span>
+                        <h4>Cream Pants</h4>
+                        <p>Relaxed · Cream</p>
+                    </div>
+
+                </div>
+
+
+                <!-- BOTTOM 4 -->
+
+                <div class="clothing-card"
+                     data-category="bottoms"
+                     data-name="Grey Skirt"
+                     data-color="#77747a">
+
+                    <div class="product-visual grey-bg">
+                        <div class="mini-bottom grey-skirt"></div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Bottoms</span>
+                        <h4>Grey Skirt</h4>
+                        <p>Pleated · Grey</p>
+                    </div>
+
+                </div>
+
+
+                <!-- SHOES 1 -->
+
+                <div class="clothing-card"
+                     data-category="shoes"
+                     data-name="Classic Sneakers">
+
+                    <div class="product-visual sneaker-bg">
+                        <div class="shoe-art white-shoe">👟</div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Shoes</span>
+                        <h4>Classic Sneakers</h4>
+                        <p>Everyday · White</p>
+                    </div>
+
+                </div>
+
+
+                <!-- SHOES 2 -->
+
+                <div class="clothing-card"
+                     data-category="shoes"
+                     data-name="Black Sneakers">
+
+                    <div class="product-visual dark-bg">
+                        <div class="shoe-art">👟</div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Shoes</span>
+                        <h4>Black Sneakers</h4>
+                        <p>Street · Black</p>
+                    </div>
+
+                </div>
+
+
+                <!-- SHOES 3 -->
+
+                <div class="clothing-card"
+                     data-category="shoes"
+                     data-name="Brown Loafers">
+
+                    <div class="product-visual brown-bg">
+                        <div class="shoe-art">👞</div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Shoes</span>
+                        <h4>Brown Loafers</h4>
+                        <p>Classic · Brown</p>
+                    </div>
+
+                </div>
+
+
+                <!-- SHOES 4 -->
+
+                <div class="clothing-card"
+                     data-category="shoes"
+                     data-name="White Boots">
+
+                    <div class="product-visual cream-bg">
+                        <div class="shoe-art">🥾</div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Shoes</span>
+                        <h4>White Boots</h4>
+                        <p>Modern · Ivory</p>
+                    </div>
+
+                </div>
+
+
+                <!-- ACCESSORIES -->
+
+                <div class="clothing-card"
+                     data-category="accessories"
+                     data-name="Black Sunglasses">
+
+                    <div class="product-visual accessory-bg">
+                        <div class="accessory-art">🕶️</div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Accessories</span>
+                        <h4>Black Sunglasses</h4>
+                        <p>Classic · Black</p>
+                    </div>
+
+                </div>
+
+
+                <div class="clothing-card"
+                     data-category="accessories"
+                     data-name="Classic Hand Bag">
+
+                    <div class="product-visual accessory-bg">
+                        <div class="accessory-art">👜</div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Accessories</span>
+                        <h4>Classic Hand Bag</h4>
+                        <p>Leather · Black</p>
+                    </div>
+
+                </div>
+
+
+                <div class="clothing-card"
+                     data-category="accessories"
+                     data-name="Fashion Cap">
+
+                    <div class="product-visual accessory-bg">
+                        <div class="accessory-art">🧢</div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Accessories</span>
+                        <h4>Fashion Cap</h4>
+                        <p>Street · Black</p>
+                    </div>
+
+                </div>
+
+
+                <div class="clothing-card"
+                     data-category="accessories"
+                     data-name="Gold Necklace">
+
+                    <div class="product-visual accessory-bg">
+                        <div class="accessory-art">📿</div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Accessories</span>
+                        <h4>Gold Necklace</h4>
+                        <p>Elegant · Gold</p>
+                    </div>
+
+                </div>
+
+
+                <div class="clothing-card"
+                     data-category="accessories"
+                     data-name="Classic Watch">
+
+                    <div class="product-visual accessory-bg">
+                        <div class="accessory-art">⌚</div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Accessories</span>
+                        <h4>Classic Watch</h4>
+                        <p>Minimal · Black</p>
+                    </div>
+
+                </div>
+
+
+                <div class="clothing-card"
+                     data-category="accessories"
+                     data-name="Mini Shoulder Bag">
+
+                    <div class="product-visual accessory-bg">
+                        <div class="accessory-art">👝</div>
+                        <button class="product-heart">♡</button>
+                    </div>
+
+                    <div class="product-info">
+                        <span>Accessories</span>
+                        <h4>Mini Shoulder Bag</h4>
+                        <p>Mini · Brown</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- ================= YOUR LOOK ================= -->
+
+        <section class="preview-panel">
+
+            <div class="preview-header">
+
+                <div>
+                    <span class="eyebrow">LIVE PREVIEW</span>
+                    <h3>Your Look</h3>
+                </div>
+
+                <span class="live-dot">
+                    <i></i> LIVE
+                </span>
+
+            </div>
+
+
+            <div class="preview-stage">
+
+                <div class="stage-circle"></div>
+
+                <div class="preview-model" id="previewModel">
+
+                    <div class="preview-hair"></div>
+
+                    <div class="preview-head">
+                        <div class="preview-face"></div>
+                    </div>
+
+                    <div class="preview-neck"></div>
+
+                    <div class="preview-top" id="modelTop">
+
+                        <div class="preview-sleeve sleeve-one"></div>
+                        <div class="preview-sleeve sleeve-two"></div>
+
+                    </div>
+
+                    <div class="preview-bottom" id="modelBottom">
+                        <div></div>
+                    </div>
+
+                    <div class="preview-shoes" id="modelShoes">
+                        👟
+                    </div>
+
+                    <div class="preview-accessory" id="modelAccessory">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="selected-items">
+
+                <div class="selected-title">
+                    CURRENTLY WEARING
+                </div>
+
+                <div class="selected-row">
+                    <span>Top</span>
+                    <b id="currentTop">Rose Knit Top</b>
+                </div>
+
+                <div class="selected-row">
+                    <span>Bottom</span>
+                    <b id="currentBottom">Blue Jeans</b>
+                </div>
+
+                <div class="selected-row">
+                    <span>Shoes</span>
+                    <b id="currentShoes">Classic Sneakers</b>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTROLS ================= -->
+
+        <aside class="controls-panel">
+
+            <div class="controls-heading">
+                <span class="eyebrow">PERSONALIZE</span>
+                <h3>Make Yours</h3>
+            </div>
+
+
+            <div class="control-block">
+
+                <div class="control-label">
+                    <span>Top Color</span>
+                    <b id="topColorName">Rose</b>
+                </div>
+
+                <div class="color-options top-colors">
+
+                    <button class="color selected"
+                            data-color="#b96c83"
+                            title="Rose"
+                            style="background:#b96c83">
+                    </button>
+
+                    <button class="color"
+                            data-color="#eeeeea"
+                            title="Ivory"
+                            style="background:#eeeeea">
+                    </button>
+
+                    <button class="color"
+                            data-color="#28262b"
+                            title="Midnight"
+                            style="background:#28262b">
+                    </button>
+
+                    <button class="color"
+                            data-color="#667b68"
+                            title="Sage"
+                            style="background:#667b68">
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="control-block">
+
+                <div class="control-label">
+                    <span>Bottom Color</span>
+                    <b id="bottomColorName">Denim</b>
+                </div>
+
+                <div class="color-options bottom-colors">
+
+                    <button class="color selected"
+                            data-color="#3f5776"
+                            title="Denim"
+                            style="background:#3f5776">
+                    </button>
+
+                    <button class="color"
+                            data-color="#222126"
+                            title="Black"
+                            style="background:#222126">
+                    </button>
+
+                    <button class="color"
+                            data-color="#b7a996"
+                            title="Cream"
+                            style="background:#b7a996">
+                    </button>
+
+                    <button class="color"
+                            data-color="#77747a"
+                            title="Grey"
+                            style="background:#77747a">
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="control-block">
+
+                <label class="control-label">
+                    Outfit Name
+                </label>
+
+                <input
+                    type="text"
+                    id="outfitName"
+                    placeholder="Name your look..."
+                >
+
+            </div>
+
+
+            <div class="control-actions">
+
+                <button class="save-btn" id="saveLook">
+                    ♡ Save Look
+                </button>
+
+                <button class="reset-btn" id="resetLook">
+                    ↻
+                </button>
+
+            </div>
+
+
+            <div class="tip-box">
+
+                <span>✦</span>
+
+                <div>
+                    <strong>Style Tip</strong>
+
+                    <p>
+                        Try combining contrasting colors
+                        for a bold and balanced look.
+                    </p>
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAVORITES ================= -->
+
+<section class="favorites" id="favorites">
+
+    <div class="section-heading">
+
+        <div>
+            <div class="eyebrow">YOUR COLLECTION</div>
+            <h2>Saved <i>looks.</i></h2>
+        </div>
+
+        <p>
+            Keep your favorite combinations here
+            and come back to them anytime.
+        </p>
+
+    </div>
+
+
+    <div id="favoritesContainer">
+
+        <div class="empty-favorites">
+
+            <div class="empty-icon">♡</div>
+
+            <h3>No saved looks yet</h3>
+
+            <p>
+                Create an outfit and save it here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TOAST ================= -->
+
+<div id="toast"></div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        ✦ StyleStudio
+    </div>
+
+    <p>
+        Designed for your personal style.
+    </p>
+
+    <span>
+        © 2026 StyleStudio
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
